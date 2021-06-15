@@ -40,7 +40,6 @@
         case 'showLoginForm':
           //Wyświetlenie formularza logowania
           include('templates/loginForm.php');
-
           break;
         case 'showRegistrationForm':
           //Wyświetlenie formularza wyszukiwania
@@ -53,7 +52,7 @@
         case 'searchBook':
           //Wyszukanie książki
           $portal->showSearchForm();
-          $portal->showSearchResult();
+          $portal->showSearchResults();
           break;
         case 'showBookDetails':
           //Wyświetlenie szczegółowych informacji o książce
@@ -65,6 +64,7 @@
           break;
         case 'checkout':
           //Wyświetlenie podsumowania zamówienia
+          $portal->checkout();
           break;
         case 'showMain':
         default:
